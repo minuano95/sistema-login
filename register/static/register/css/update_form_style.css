@@ -1,0 +1,60 @@
+.update-container-button {
+    margin-left: 10rem;
+    margin-top: 3rem;
+}
+
+.update-container-button button {
+    width: 11rem;
+    height: 2.9rem;
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    margin-top: 0.1rem;
+}
+
+
+.cancel-button, .btn-dashboard-functions a{
+    width: 11rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-primary-dark);
+    text-decoration: none;
+    color: var(--color-white);
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    appearance: auto;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    padding-top: 0.5rem;
+}
+
+.btn-dashboard-functions a{
+    height: 5rem;
+}
+
+.btn-dashboard-functions {
+    margin-top: 5rem;
+    display: inline;
+}
+
+.dashboard-content {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem
+}

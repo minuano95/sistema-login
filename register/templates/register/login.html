@@ -1,0 +1,41 @@
+{% extends 'global/templates/base.html' %}
+{% load static %}    
+    
+
+{% block title %}
+    Login
+{% endblock title %}
+
+{% block content %}
+
+<div class="form-login-container">
+    <div class="login-container">
+        <form class="form-login" id="form-login" action="{% url 'register:login_create' %}" method="post">
+            {% csrf_token %}
+            
+            <div class="form-login-top-header">
+                Entre na sua <span style="color: #e76113">conta</span>
+            </div>
+            
+            {% for field in form  %}
+            <div class="input-login-container">
+                <div class="input-login-title">
+                    {{ field.label }}
+                </div>    
+                    
+                {{ field }}
+   
+            {% endfor %}           
+            {% include 'global/partials/messages.html' %}
+                
+           
+            <button class="login-account-button">
+                Entrar
+            </button>
+        </form>
+    </div>
+</div>
+<div class="alredy-user">
+    <a href="{% url 'register:register' %}">Não possui uma conta?</a>
+</div>
+{% endblock content %}

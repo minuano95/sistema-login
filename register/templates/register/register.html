@@ -1,0 +1,98 @@
+{% extends 'global/templates/base.html' %}
+{% load static %}    
+    
+
+{% block title %}
+    Crie a sua conta
+{% endblock title %}
+
+{% block content %}
+
+<div class="form-container">
+
+    {% include 'global/partials/messages.html' %}
+
+    <div class="container">
+
+        <form class="form-register" id="form-register" action="{% url 'register:register_create' %}" method="post">
+            {% csrf_token %}
+            <div class="form-top-header">
+                Crie sua <span style="color: #e76113">conta</span>
+            </div>
+            
+            
+            <div class="name-container">
+                <div class="firstname-input-container">
+                    <div class="input-title">
+                        Nome
+                    </div>
+                        {{ form.first_name }}
+                        {% if form.first_name.errors %}
+                            <div class="form-message-errors">
+                                {{ form.first_name.errors.errors }}
+                            </div>
+                        {% endif %}
+                        
+                    </div>
+                <div class="lastname-input-container">
+                    <div class="input-title">
+                        Sobrenome
+                    </div>
+                    {{ form.last_name }}
+                    {% if form.last_name.errors %}
+                        <div class="form-message-errors">
+                            {{ form.last_name.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            
+            {% for field in form  %}
+                {% if field.label != 'Primeiro nome' and field.label != 'Último nome' %}
+                    <div class="input-container">
+                        <div class="input-title">
+                            {{ field.label }}
+                        </div>    
+                        
+                        {{ field }}
+                        
+                        
+                        {% if field.label == 'Usuário' %}
+                            <div class="form-help-text">
+                                {{ field.help_text }}
+                            </div>
+                        {% endif %}
+                            
+
+                        {% if field.errors %}
+                            <div class="form-message-errors">
+                                {{ field.errors }}
+                            </div>
+                        {% endif %}
+                            
+                    </div>
+                {% endif %}
+            {% endfor %}
+            
+            {% if form.errors %}
+                <div class="form-message-errors">
+                    Por gentileza, identifique e corrija os erros presentes no formulário.
+                </div>
+            {% endif %}
+                
+            <div class="container-button">
+                <button class="register-account-button">
+                    Criar conta
+                </button>
+            </div>
+            <div class="alredy-user">
+                <a href="{% url 'register:login' %}">Já possui uma conta?</a>
+            </div> 
+        </form>
+    </div>
+</div>
+
+<div class="alredy-user">
+</div>
+{% endblock content %}

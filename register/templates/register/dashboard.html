@@ -1,0 +1,42 @@
+{% extends 'global/templates/base.html' %}
+{% load static %}    
+    
+
+{% block title %}
+    Dashboard ({{ user }})
+{% endblock title %}
+
+{% block content %}
+
+<div class="form-container">
+
+    {% include 'global/partials/messages.html' %}
+
+    <div class="container">
+
+        <div class="form-top-header" style="text-align: center;">
+            Bem vindo a sua <span style="color: #e76113">Dashboard</span><br>
+            <p style="margin-top: 1rem">Você está conectado com {{user.username}}</p>
+        </div>
+
+        <div class="container-dashboard">
+            <div class="dashboard-content">
+                <div class="btn-dashboard-functions">
+                    <a href="{% url 'register:update_email' %}">Atualizar E-mail</a>
+                </div>
+                <div class="btn-dashboard-functions">
+                    <a href="{% url 'register:update_password' %}">Atualizar Senha</a>
+                </div>
+                <div class="btn-dashboard-functions">
+                    <a href="{% url 'register:delete_account' %}">Deletar Conta</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="alredy-user">
+            <a href="{% url 'register:logout' %}">Clique aqui para sair</a>
+        </div>
+        
+    </div>
+</div>
+{% endblock content %}

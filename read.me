@@ -1,0 +1,78 @@
+Aplicação de Registro de Usuários
+Esta é uma aplicação simples de registro de usuários desenvolvida em Django. Ela permite que os usuários se registrem no sistema, façam login, atualizem seu email e senha, bem como excluam suas contas.
+
+Funcionalidades
+Registro de Usuário: Os usuários podem se registrar fornecendo informações como nome, sobrenome, nome de usuário, email e senha. Senhas são verificadas para garantir a segurança do usuário.
+
+Login: Os usuários podem fazer login no sistema usando seu nome de usuário e senha.
+
+Logout: Os usuários podem fazer logout do sistema a qualquer momento.
+
+Atualização de Email: Os usuários autenticados podem atualizar o email associado à sua conta.
+
+Atualização de Senha: Os usuários autenticados podem atualizar sua senha.
+
+Exclusão de Conta: Os usuários autenticados podem excluir suas contas, removendo permanentemente seus dados do sistema.
+
+Requisitos de Instalação
+Python: Esta aplicação requer o Python (versão 3.x) instalado em seu sistema.
+
+Django: A aplicação foi desenvolvida utilizando o framework Django (versão 3.x).
+
+Banco de Dados: Você pode utilizar um banco de dados SQL (por exemplo, SQLite, MySQL, PostgreSQL) para armazenar os dados dos usuários.
+
+Instalação e Execução
+Clone o repositório para o seu sistema local.
+
+Navegue até o diretório raiz da aplicação no terminal.
+
+Crie um ambiente virtual (opcional, mas recomendado) para isolar as dependências da aplicação do restante do sistema:
+
+
+python -m venv venv
+Ative o ambiente virtual:
+No Windows:
+venv\Scripts\activate
+
+No Linux/Mac:
+bash
+
+source venv/bin/activate
+Instale as dependências da aplicação:
+
+pip install -r requirements.txt
+Realize as migrações do banco de dados:
+
+python manage.py migrate
+Crie um superusuário (admin) para acessar a área de administração:
+
+python manage.py createsuperuser
+Execute o servidor de desenvolvimento:
+
+python manage.py runserver
+Acesse a aplicação em seu navegador através do endereço: http://localhost:8000/
+Uso
+Acesse a página de registro para criar uma nova conta de usuário.
+
+Faça login na aplicação usando as credenciais criadas durante o registro.
+
+Após o login, você será redirecionado para a página do painel de controle (dashboard).
+
+No painel de controle, você encontrará opções para atualizar seu email e senha.
+
+Para excluir sua conta, clique no link "Deletar Conta" na página do painel de controle.
+
+Observações
+Esta é uma aplicação simples desenvolvida com fins educacionais e pode não ser adequada para ambientes de produção.
+
+Certifique-se de configurar adequadamente as configurações do banco de dados e da segurança da aplicação antes de implantá-la em um ambiente de produção.
+
+Não se esqueça de proteger suas chaves secretas e senhas em um ambiente de produção.
+
+Sinta-se à vontade para personalizar e expandir esta aplicação para atender às suas necessidades específicas.
+
+Autor
+Esta aplicação foi desenvolvida por [Seu Nome] (coloque seu nome aqui). Você pode entrar em contato comigo em [seu email] (coloque seu email aqui) para quaisquer dúvidas ou sugestões.
+
+Licença
+Esta aplicação está licenciada sob a licença [nome da licença] (coloque a licença que deseja usar aqui). Leia o arquivo LICENSE para mais informações.

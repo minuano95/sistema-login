@@ -1,0 +1,199 @@
+:root {
+    --color-primary: #269fe6;
+    --color-primary-hover: #2086c2;
+    --color-primary-dark: #e76113;
+    --color-primary-dark-hover: #212336;
+    --color-primary-light-hover: #bdd8e7;
+    --color-background-light: #FAFAFA;
+
+    --color-white: #fff;
+    --color-black: #000;
+
+    --color-dark-text: #444;
+    --color-info-light: #cce5ff;
+    --color-debug-light: #cce5ff;
+    --color-success-light: #d4edda;
+    --color-alert-light: #fff3cd;
+    --color-warning-light: #fff3cd;
+    --color-error-light: #f8d7da;
+
+    --color-info-dark: #4d86c4;
+    --color-debug-dark: #4d86c4;
+    --color-success-dark: #4a9c5d;
+    --color-alert-dark: #927f40;
+    --color-warning-dark: #927f40;
+    --color-error-dark: #da525d;
+
+    --color-gray-0: #f9f9f9;
+    --color-gray-1: #e0e0e0;
+    --color-gray-2: #c7c7c7;
+    --color-gray-3: #aeaeae;
+    --color-gray-4: #959595;
+    --color-gray-5: #7d7d7d;
+    --color-gray-6: #646464;
+    --color-gray-7: #4b4b4b;
+    --color-gray-8: #323232;
+    --color-gray-9: #191919;
+
+    --font-primary: sans-serif;
+    --font-headings: 'Roboto Slab', serif;
+
+    --spacing-gutter-medium: 2rem;
+    --spacing-gutter-large: 4rem;
+}
+
+
+.form-container {
+    background-color: white;
+    border-radius: 2rem;
+
+    box-shadow: 0 0 0.3rem grey;
+    padding: var(--spacing-gutter-medium);
+    max-width: 51rem;
+    margin: 1.5rem auto;
+}
+
+.container {
+    max-width: 100%;
+    margin-right: 1.3rem;
+}
+
+.form-top-header {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.name-container {
+    display:flex;
+    width: 100%;
+}
+
+.firstname-input-container {
+    max-width: 100%;
+    margin-top: 3rem;
+    font-family: var(--font-primary);
+}
+
+.lastname-input-container {
+    max-width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-family: var(--font-primary);
+    padding-left: 5rem;
+}
+
+.input-container {
+    margin-bottom: 3rem;
+    font-family: var(--font-primary);
+}
+
+.input-title {
+    color: #B5B1AD;
+    font-size: 1.5rem;
+    margin-left: 1.3rem;
+}
+
+input {
+    width: 100%;
+    border: none;
+    border-bottom: 0.1rem solid #B5B1AD;
+    outline: none;
+    margin: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-bottom: 0.1rem solid blue;
+}
+
+.firstname-input-container input {
+    max-width: 47rem;
+    border: none;
+    border-bottom: 0.1rem solid #B5B1AD;
+    outline: none;
+    font-family: var(--font-primary);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+}
+
+.firstname-input-container input:focus {
+    border-bottom: 0.1rem solid blue;
+}
+
+.lastname-input-container input {
+    max-width: 27rem;
+    border: none;
+    border-bottom: 0.1rem solid #B5B1AD;
+    outline: none;
+    font-family: var(--font-primary);
+    padding-right: 1rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+}
+
+.lastname-input-container input:focus {
+    border-bottom: 0.1rem solid blue;
+}
+
+.container-button {
+    margin-left: 5rem;
+    margin-top: 1rem
+}
+
+.container-button button {
+    width: 11rem;
+    height: 3rem;
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    margin-left: 10rem;
+}
+
+.alredy-user a {
+    font-size: 1.3rem;
+    font-family: var(--font-primary);
+    color: #2086c2;
+    margin-left: 14rem;
+}
+
+.message.error {
+    width: 100%;
+    font-family: var(--font-primary);
+    font-size: 1.3rem;
+    color: #FF9494
+}
+
+.message.success {
+    width: 100%;
+    font-family: var(--font-primary);
+    font-size: 1.3rem;
+    color: #B5B1AD
+}
+
+.form-help-text {
+    width: 100%;
+    margin-left: 1rem;
+    font-family: var(--font-primary);
+    font-size: 1.3rem;
+    padding-bottom: 0.5rem;
+    color: #B5B1AD
+}
+
+.form-message-errors {
+    width: 100%;
+    background-color: #ffb8c3ea;
+    font-family: var(--font-primary);
+    font-size: 1.3rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
